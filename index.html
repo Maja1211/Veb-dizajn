@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Речко</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="zaglavlje-levo">
+            <button id="dugme-uputstvo" title="Упутство">❓</button>
+        </div>
+
+        <h1>РЕЧКО</h1>
+
+        <div class="zaglavlje-desno">
+            <button id="dugme-statistika" title="Статистика">📊</button>
+            <button id="dugme-podesavanja" title="Подешавања">⚙</button>
+        </div>
+    </header>
+
+
+    <div id="mreza">
+        <div class="red">
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+        </div>
+        <div class="red">
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+        </div>
+        <div class="red">
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+        </div>
+        <div class="red">
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+        </div>
+        <div class="red">
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+        </div>
+        <div class="red">
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+            <div class="polje"></div>
+        </div>
+    </div>
+
+
+    <div id="tastatura">
+        <div class="red-tastera">
+            <button>Љ</button>
+            <button>Њ</button>
+            <button>Е</button>
+            <button>Р</button>
+            <button>Т</button>
+            <button>З</button>
+            <button>У</button>
+            <button>И</button>
+            <button>О</button>
+            <button>П</button>
+            <button>Ш</button>
+        </div>
+        <div class="red-tastera">
+            <button>А</button>
+            <button>С</button>
+            <button>Д</button>
+            <button>Ф</button>
+            <button>Г</button>
+            <button>Х</button>
+            <button>Ј</button>
+            <button>К</button>
+            <button>Л</button>
+            <button>Ч</button>
+            <button>Ћ</button>
+        </div>
+        <div class="red-tastera">
+            <button type="button" id="unesi">ENTER</button>
+            <button>Џ</button>
+            <button>Ц</button>
+            <button>В</button>
+            <button>Б</button>
+            <button>Н</button>
+            <button>М</button>
+            <button>Ђ</button>
+            <button>Ж</button>
+            <button type="button" id="obrisi">⌫</button>
+        </div>
+    </div>
+    <div id="poruka"></div>
+    <div id="nova-igra-kontejner" class="sakriveno">
+        <button id="nova-igra">Нова игра</button>
+    </div>
+
+    <div id="prozor-statistika" class="sakriveno">
+        <h2>Статистика</h2>
+        <div class="stat-red" id="red-1">
+            <span>1. покушај</span>
+            <div class="stat-bar">
+                <div id="stat-1" class="traka"></div>
+            </div>
+            <span id="stat-broj-1">0</span>
+        </div>
+        <div class="stat-red" id="red-2">
+            <span>2. покушај</span>
+            <div class="stat-bar">
+                <div id="stat-2" class="traka"></div>
+            </div>
+            <span id="stat-broj-2">0</span>
+        </div>
+        <div class="stat-red" id="red-3">
+            <span>3. покушај</span>
+            <div class="stat-bar">
+                <div id="stat-3" class="traka"></div>
+            </div>
+            <span id="stat-broj-3">0</span>
+        </div>
+        <div class="stat-red" id="red-4">
+            <span>4. покушај</span>
+            <div class="stat-bar">
+                <div id="stat-4" class="traka"></div>
+            </div>
+            <span id="stat-broj-4">0</span>
+        </div>
+        <div class="stat-red" id="red-5">
+            <span>5. покушај</span>
+            <div class="stat-bar">
+                <div id="stat-5" class="traka"></div>
+            </div>
+            <span id="stat-broj-5">0</span>
+        </div>
+        <div class="stat-red" id="red-6">
+            <span>6. покушај</span>
+            <div class="stat-bar">
+                <div id="stat-6" class="traka"></div>
+            </div>
+            <span id="stat-broj-6">0</span>
+        </div>
+        <div class="stat-red" id="red-promasaj">
+            <span>Није погођена</span>
+            <div class="stat-bar">
+                <div id="stat-promasaj" class="traka promasaj"></div>
+            </div>
+            <span id="stat-broj-promasaj">0</span>
+        </div>
+        <button id="zatvori-statistika">Затвори</button>
+    </div>
+
+
+
+    <div id="prozor-uputstvo" class="sakriveno">
+        <h2>Упутство</h2>
+        <p>Погодите тајну реч од 5 слова у највише 6 покушаја.</p>
+        <p>Након сваког покушаја, поља мењају боју:</p>
+        <p><b class="zeleno">Зелено</b> – слово је на правом месту</p>
+        <p><b class="zuto">Жуто</b> – слово постоји у речи, али није на том месту</p>
+        <p><b class="sivo">Сиво</b> – слово није у речи</p>
+        <p>Унос слова је могућ преко екрана или физичке тастатуре.</p>
+        <p>Игра се завршава победом или приказивањем тајне речи након 6 покушаја.</p>
+        <button id="zatvori-uputstvo">Затвори</button>
+    </div>
+
+    <div id="prozor-podesavanja" class="sakriveno">
+        <h2>Подешавања</h2>
+        <p>Да ли желите да ресетујете статистику?</p>
+        <button id="reset-statistika">Ресетуј статистику</button>
+
+        <button id="zatvori-podesavanja">Затвори</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
